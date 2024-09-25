@@ -31,9 +31,9 @@ button{
     font-weight:500;
     cursor: pointer;
     transition: all 500ms ease;
-    color: black;
+    color: #000000;
     background: var(--tg-theme-secondary-bg-color);
 }
 .button:hover{
-    background:white;
+    background: #FFFFFF;
 }
