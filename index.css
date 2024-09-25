@@ -18,7 +18,7 @@
     width: 350px;
     margin: 0 auto;
 }
-.a.button {
+a.button {
     padding: 1px 6px;
     border: 1px outset buttonborder;
     border-radius: 3px;
@@ -26,7 +26,7 @@
     background-color: #FFFFFF;
     text-decoration: none;
 }
-.a.button:hover{
+a.button:hover{
     color: #FFFFFF;
     background-color: #000000;
 }
