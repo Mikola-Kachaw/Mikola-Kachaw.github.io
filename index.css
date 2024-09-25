@@ -12,15 +12,17 @@
 
 .h1{
     text-align: center;
+    color: var(--tg-theme-text-color);
 }
 
 .p{
     width: 350px;
     margin: 0 auto;
+    color: var(--tg-theme-text-color);
 }
 a.button {
     padding: 1px 6px;
-    border: 1px outset buttonborder;
+    border: 1px;
     border-radius: 3px;
     color: #000000;
     background-color: #FFFFFF;
