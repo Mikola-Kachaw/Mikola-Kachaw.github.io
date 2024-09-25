@@ -18,20 +18,15 @@
     width: 350px;
     margin: 0 auto;
 }
-
-button{
-    border: 0;
-    border-radius: 5px;
-    margin-top: 50px;
-    height: 60px;
-    width: 200px;
-    font-size: 20px;
-    font-weight:500;
-    cursor: pointer;
-    transition: all 500ms ease;
+.a.button {
+    padding: 1px 6px;
+    border: 1px outset buttonborder;
+    border-radius: 3px;
     color: #000000;
-    background: #e0e0e0;
+    background-color: #FFFFFF;
+    text-decoration: none;
 }
-.button:hover{
-    background: #FFFFFF;
+.a.button:hover{
+    color: #FFFFFF;
+    background-color: #000000;
 }
