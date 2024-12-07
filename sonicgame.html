@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔵ЛАБИРИНТ С СОНИКОМ🔵</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/sonic/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/sonic/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/sonic/favicon-16x16.png">
+    <script src="js/index.js" defer></script>
+    <script src="js/sonicgame.js" defer></script>
+</head>
+<body>
+    <audio preload="auto" autoplay loop id="theme" src="/assets/sound/Sonic Page.mp3"></audio>
+    <div class="container pageswf sonicpage">
+        <h1 style="font-weight: bolder;">ЛАБИРИНТ С СОНИКОМ</h1>
+        <div class="windowgame"id="container">
+            <h1 style="text-align: center;">WORK IN PROGRESS</h1>
+        </div>
+        <div class="pagesel">
+            <div class="custom-select">
+                <select id="diffSelect">
+                    <option value="10">Легко</option>
+                    <option value="15">Средне</option>
+                    <option value="25">Тяжело</option>
+                    <option value="38">Экстрим</option>
+                </select>
+            </div>
+            <button onclick="makeMaze()" id="startMaze"class="save spstart">СТАРТ</button>
+        </div>
+        <p class="description">УПРАВЛЕНИЕ:<br>→ , ←, ↓, ↑ - ходьба <br> МЫШЬ - навигация</p>
+        <button onclick="setTimeout(()=>{window.location.href = 'gameselect.html';},900)" id="back"class="swf">НАЗАД</button>
+    </div>
+</body>
+</html>

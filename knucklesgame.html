@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔴ПРОТИВ НАКЛЗА🔴</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/knux/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/knux/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/knux/favicon-16x16.png">
+    <script src="js/index.js" defer></script>
+    <script src="js/knuxgame.js" defer></script>
+</head>
+<body>
+    <audio preload="auto" autoplay loop id="theme" src="/assets/sound/Knux Page.mp3"></audio>
+    <div class="container pageswf knuxpage">
+        <h1 style="font-weight: bolder;">ПРОТИВ НАКЛЗА</h1>
+        <div class="windowgame">
+            <div class="knuxgame" id="knuxgame">
+                <h2 class="result">Счёт: 0</h2>
+                <img class="eggpawn" src="assets/eggpawn.png">
+            </div>
+        </div>
+        <p class="description">УПРАВЛЕНИЕ:<br>ЛКМ - удар по роботу Доктора Эггмана <br> МЫШЬ - навигация</p>
+        <button onclick="setTimeout(()=>{window.location.href = 'gameselect.html';},900)" id="back"class="swf">НАЗАД</button>
+    </div>
+</body>
+</html>
