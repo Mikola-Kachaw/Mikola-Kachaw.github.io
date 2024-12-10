@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLASH GAMING BACK!!!</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+    <script src="js/index.js" defer></script>
+</head>
+<body>
+    <audio preload="auto" autoplay loop id="theme" src="/assets/sound/Flash Back.mp3"></audio>
+    <div class="container pageswf">
+        <h1 style="font-weight: bolder;">SONIC HEROES PUZZLE</h1>
+        <div class="windowswf"id="container">
+            <script>
+                window.RufflePlayer = window.RufflePlayer || {};
+                window.RufflePlayer.config = {
+                    "warnOnUnsupportedContent": false, 
+                    "autoplay": "on", 
+                    "unmuteOverlay": "hidden",
+                    "contextMenu": "off"
+                };
+                window.addEventListener("load", (event) => {
+                    const ruffle = window.RufflePlayer.newest();
+                    const player = ruffle.createPlayer();
+                    const container = document.getElementById("container");
+                    container.appendChild(player);
+                    player.ruffle().load("assets/Sonic_Heroes_Puzzle.swf");
+                });
+            </script>
+            <script src="js/ruffle.js"></script>
+        </div>
+        <p class="description">УПРАВЛЕНИЕ:<br>→ , ← - смена положения блока по горизонтали<br>↑ - смена положения фигур в блоке<br>↓ - ускорение блока<br> МЫШЬ - навигация</p>
+        <button onclick="setTimeout(()=>{window.location.href = 'index.html';},900)" id="back"class="swf">НАЗАД</button>
+    </div>
+</body>
+</html>

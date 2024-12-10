@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonic Heroes</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+    <script src="js/index.js" defer></script>
+</head>
+<body>
+    <audio preload="auto" autoplay loop  id="theme" src="/assets/sound/Title.mp3"></audio>
+    <div class="container">
+        <img class="sonic" src="/assets/Sonic_heroes02.webp" alt="">
+        <img class="tails" src="/assets/Heroes_CGTails2_32.webp" alt="">
+        <img class="knuckles" src="/assets/Knuckles_heroes_03.webp" alt="">
+        <div class="pageswf">
+            <img class="logo" src="/assets/Sonic_Heroes.webp" alt="">
+            <button onclick="setTimeout(()=>{window.location.href = 'gameselect.html';},900)" id="menuselect"class="start">СТАРТ</button>
+        </div>
+        <button onclick="setTimeout(()=>{window.location.href = 'swf_page.html';},900)" id="swfsel"class="swf">???</button>
+        <button onclick="setTimeout(()=>{window.location.href = 'credits.html';},900)" id="swfsel"class="credits">АВТОРЫ</button>
+    </div>
+</body>
+</html>
