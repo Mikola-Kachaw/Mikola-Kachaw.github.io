@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабиринт Билетов</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+    <script src="js/sonicgame.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js" defer></script>
+</head>
+<body>
+    <div class="container pageswf sonicpage">
+        <h1 style="font-weight: bolder;padding-bottom: 20px;">Лабиринт Билетов</h1>
+        <div class="windowmaze"id="page">
+        <div id="Message-Container">
+                <div class="pagesel1 victory">
+                    <h2>ВЫ ПОБЕДИЛИ!!!<h2>
+                    <p id="moves"></p>
+                    <button class="save" id="okBtn" onclick="toggleVisabitily('Message-Container')">ЗДОРОВО!</button>
+                </div>
+            </div>
+            <div id="view">
+                <div id="mazeContainer">
+                    <canvas id="mazeCanvas" height="585" width="585"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="pagesel" id="menu">
+            <div class="custom-select">
+                <select id="diffSelect">
+                    <option value="10">Легко</option>
+                    <option value="15">Средне</option>
+                    <option value="25">Тяжело</option>
+                    <option value="38">Экстрим</option>
+                </select>
+            </div>
+            <button onclick="makeMaze()" id="startMaze"class="save spstart">СТАРТ</button>
+        </div> 
+        <p class="description">УПРАВЛЕНИЕ:<br>→ , ←, ↓, ↑ - ходьба <br> МЫШЬ - навигация</p>
+    </div>
+    <footer>
+        <button onclick="window.location.href = 'gameselect.html'">Назад</button>
+</footer>
+</body>
+</html>

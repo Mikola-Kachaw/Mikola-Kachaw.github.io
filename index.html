@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Счастье - это...</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+    <script src="js/index.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="pageswf">
+            <img class="logo" src="/assets/logo.png" alt="">
+            <button onclick="window.location.href = 'gameselect.html'"class="start">На онлайн-фестиваль!</button>
+        </div>
+        <div class="timer-container">
+            <div class="message" id="message">До настоящего фестиваля осталось:</div>
+            <div id="timer" class="timer">
+                <span id="days">00</span>
+                <span id="hours">00</span>
+                <span id="minutes">00</span>
+                <span id="seconds">00</span>
+            </div>
+            <div class="labels">
+                <span>Дней</span>
+                <span>Часов</span>
+                <span>Минут</span>
+                <span>Секунд</span>
+            </div>
+            <div id="festival-started" class="festival-started" style="display: none;">Фестиваль начинается!</div>
+        </div>
+    </div>
+    <footer>
+            <button onclick="window.location.href = 'playlist.html'">Плейлист</button>
+            <a href="https://vk.com/aktiv_iei"><img class="vk" src="assets/VK.png" alt=""></a>
+    </footer>
+</body>
+</html>

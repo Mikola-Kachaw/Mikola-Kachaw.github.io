@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каляка-Маляка</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+    <script src="js/tailsgame.js" defer></script>
+</head>
+<body>
+    <audio preload="auto" autoplay loop id="theme" src="/assets/sound/Tails Page.mp3"></audio>
+    <div class="pageswf">
+        <h1 style="font-weight: bolder; padding-bottom: 20px;">Каляка-Маляка</h1>
+        <div class="windowgame"id="container">
+            <canvas style="background-color: white;" id="board"></canvas>
+        </div>
+        <div class="pagesel1">
+            <p class="description">Цвет:</p>
+            <input class="colorpick" type="color" id="color-pick">
+            <p class="description">Размер кисти:</p>
+            <input type="range" id="brush-size-pick" min="1" max="50">
+        </div>
+        <div class="pagesel1">
+            <button id="save"class="save">СОХРАНИТЬ</button>
+            <button id="clear"class="clear">ОЧИСТИТЬ</button>
+        </div>
+    </div>
+    <footer>
+        <button onclick="window.location.href = 'gameselect.html'">Назад</button>
+</footer>
+</body>
+</html>

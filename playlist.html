@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Счастиливый Плейлист</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/player.js"></script>
+</head>
+<body>
+    <h1 style="text-align: center; font-size: 50px; padding-bottom: 10px; font-family: 'Arctika Script', sans-serif;">Счастиливый Плейлист</h1>
+    <div id="player">
+        <img id="playImg" src="songs/loading.webp">
+        <div id="playControls">
+          <div id="playName">Select A Song</div>
+  
+          <input id="playTimeR" type="range" value="0" min="0" disabled>
+          <div id="playTimeD">
+            <div id="playTimeN">0:00</div>
+            <div id="playTimeT">0:00</div>
+          </div>
+  
+          <div id="playButtons">
+            <b id="playLast">◀️</b>
+            <b id="playTog">⏯️</b>
+            <b id="playNext">▶️</b>
+            <b id="playVolI">🔊</b>
+            <input id="playVolR" type="range" min="0" max="1" step="0.1" value="1" disabled>
+            </div>
+        </div>
+  
+        <div id="playList">
+          <div data-src="5sta Family & DJ Pankratov - Моя мелодия.mp3" data-img="playlist.png">5sta Family & DJ Pankratov - Моя мелодия</div>
+          <div data-src="Calvin Harris ft Elle Goulding - Outside(2015).mp3" data-img="playlist.png">Calvin Harris ft Elle Goulding - Outside</div>
+          <div data-src="Daft Punk feat. Pharrell Williams, Nile Rodgers - Get Lucky.mp3" data-img="playlist.png">Daft Punk feat. Pharrell Williams, Nile Rodgers - Get Lucky</div>
+          <div data-src="DJ Stonik1917 - GoodDayFlopTray.mp3" data-img="playlist.png">DJ Stonik1917 - GoodDayFlopTray</div>
+          <div data-src="IOWA - Улыбайся.mp3" data-img="playlist.png">IOWA - Улыбайся</div>
+          <div data-src="Kadebostany - Teddy Bear (Astero Radio Remix).mp3" data-img="playlist.png">Kadebostany - Teddy Bear (Astero Radio Remix)</div>
+          <div data-src="Katy Perry - Firework.mp3" data-img="playlist.png">Katy Perry - Firework</div>
+          <div data-src="Pharrell Williams - Happy.mp3" data-img="playlist.png">Pharrell Williams - Happy</div>
+          <div data-src="RADIO TAPOK - Umbrella.mp3" data-img="playlist.png">RADIO TAPOK - Umbrella</div>
+          <div data-src="Rascal Flatts - Life is a Highway (2006 ''Cars'').mp3" data-img="playlist.png">Rascal Flatts - Life is a Highway</div>
+          <div data-src="Sabrina Carpenter - Espresso.mp3" data-img="playlist.png">Sabrina Carpenter - Espresso</div>
+          <div data-src="Zivert - счастье.mp3" data-img="playlist.png">Zivert - счастье</div>
+          <div data-src="Ария - Беспечный ангел.mp3" data-img="playlist.png">Ария - Беспечный ангел</div>
+          <div data-src="Бабкины внуки - Что ж ты роза.mp3" data-img="playlist.png">Бабкины внуки - Что ж ты роза</div>
+          <div data-src="Вера Брежнева - Любовь спасёт мир.mp3" data-img="playlist.png">Вера Брежнева - Любовь спасёт мир</div>
+          <div data-src="Ёлка - Впусти музыку.mp3" data-img="playlist.png">Ёлка - Впусти музыку</div>
+          <div data-src="Ёлка - Всё зависит от нас.mp3" data-img="playlist.png">Ёлка - Всё зависит от нас</div>
+          <div data-src="Ёлка - Грею счастье.mp3" data-img="playlist.png">Ёлка - Грею счастье</div>
+          <div data-src="Ёлка - Прованс.mp3" data-img="playlist.png">Ёлка - Прованс</div>
+          <div data-src="Жанна Фриске - А на море белый песок.mp3" data-img="playlist.png">Жанна Фриске - А на море белый песок</div>
+          <div data-src="Макс Корж - Жить в кайф.mp3" data-img="playlist.png">Макс Корж - Жить в кайф</div>
+          <div data-src="Сергей Лазарев - Пусть весь мир подождет.mp3" data-img="playlist.png">Сергей Лазарев - Пусть весь мир подождет</div>
+          <div data-src="Ю.САВИЧЕВА - Если в сердце живёт любовь.mp3" data-img="playlist.png">Юлия Савичева - Если в сердце живёт любовь</div>
+        </div>
+      </div>
+      <footer>
+        <button onclick="window.location.href = 'index.html'">Назад</button>
+        <button onclick="window.location.href = 'https://vk.com/music/playlist/-72236729_1_de3f1d07515a6f725f'">Послушать через ВК</button>
+</footer>
+</body>
+</html>
+</html>
