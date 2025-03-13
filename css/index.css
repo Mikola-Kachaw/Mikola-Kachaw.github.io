@@ -28,8 +28,8 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 40px;
-    padding-bottom: 100px;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .vk{
@@ -83,7 +83,7 @@ body {
 
 
 .sticky-items {
-    position: sticky; /* Фиксированное позиционирование */
+    position: fixed; /* Фиксированное позиционирование */
     bottom: 0px; /* Прижимаем к нижней части экрана */
     left: 0; /* Прижимаем к левой части экрана */
     right: 0; /* Прижимаем к правой части экрана */
@@ -143,6 +143,7 @@ a:hover, a:active {
 }
 
 .swf {
+    margin: 50px 0;
     left: 1%;
     top: 91%;
 }
@@ -193,9 +194,9 @@ a:hover, a:active {
 
 .pagesel {
     display: flex;
-    justify-content: space-evenly;
-    gap: 60px;
+    justify-content: space-around;
     margin: auto;
+    width: 100vw;
 }
 
 .pagesel1 {
@@ -207,8 +208,10 @@ a:hover, a:active {
 }
 
 .windowgame {
-    width: 800px;
-    height: 600px;
+    max-width: 800px;
+    max-height: 600px;
+    width: calc(100vw - 300px);
+    height: calc(100vh - 200px);
     margin: auto;
     border: 2px;
     border-radius: 10px;
@@ -219,8 +222,10 @@ a:hover, a:active {
 
 
 .knuxgame{
-    width: 785px;
-    height: 585px;
+    max-width: 785px;
+    max-height: 585px;
+    width: calc(100vw - 315px);
+    height: calc(100vh - 215px);
     background-image: url(/assets/knuxgameback.png);
     background-position: center;
     background-size: cover;
@@ -311,6 +316,38 @@ option {
     border-radius: 10px;
 }
 
+.rotate-warn {
+    width: 100vw;
+    height: calc(100vh - 40px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.phone {
+    width: 35%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.phone-img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    animation: rotate 3.5s infinite;
+}
+
+.phone-logo {
+    width: 38%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: scaling 3.5s infinite;
+}
+
 .windowmaze {
     width: 595px;
     height: 595px;
@@ -324,12 +361,20 @@ option {
 
 #player, #playTimeD, #playButtons { display: flex; }
 
-#player {
+#player { 
+  width: calc(100vw - 30px);
+  margin-left: 15px; 
+  margin-right: 15px;
   flex-wrap: wrap;
   max-width: 800px;
   padding: 20px; border-radius: 10px;
   background: #e6e6e6;
   margin: auto;
+}
+
+.empty-space {
+    height: 100px;
+    color: #00000000;
 }
 
 #playImg {
@@ -361,7 +406,7 @@ option {
 #playVolR { flex-shrink: 1; max-width: 120px; }
 
 
-#playList { width: 100%; margin-top: 20px; }
+#playList { width: calc(100% - 30px); margin-top: 20px;}
 #playList div { padding: 10px; cursor: pointer; color: black}
 #playList div.current { font-weight: 700; color: #a41111; }
 #playList div:nth-child(odd) { background: #f3f3f3; }
@@ -420,11 +465,17 @@ option {
 
 @media (max-width: 1000px) {
     .logo {
-        width: 100vw;
+        width: 90vw;
+        margin: auto;
     }
 }
 
 @media (max-width: 600px) {
+    .pagesel {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .timer {
         width: 100vw;
         flex-wrap: wrap;
@@ -434,5 +485,29 @@ option {
 
     .time-unit {
         width: 41vw;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: none;
+    }
+    70% {
+        transform: rotate(90deg);
+    }
+    80% {
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes scaling {
+    5% {
+        transform: scale(1.01) translate(-50% -50%);
+    }
+    70% {
+        transform: scale(1.3) translate(-40%, -40%);
+    }
+    80% {
+        transform: scale(1.3) translate(-40%, -40%);
     }
 }
