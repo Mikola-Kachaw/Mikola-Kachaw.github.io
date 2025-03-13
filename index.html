@@ -19,23 +19,29 @@
         <div class="timer-container">
             <div class="message" id="message">До настоящего фестиваля осталось:</div>
             <div id="timer" class="timer">
-                <span id="days">00</span>
-                <span id="hours">00</span>
-                <span id="minutes">00</span>
-                <span id="seconds">00</span>
-            </div>
-            <div class="labels">
-                <span>Дней</span>
-                <span>Часов</span>
-                <span>Минут</span>
-                <span>Секунд</span>
+                <div class="time-unit">
+                    <span id="days">00</span>
+                    <span class="label">Дней</span>
+                </div>
+                <div class="time-unit">
+                    <span id="hours">00</span>
+                    <span class="label">Часов</span>
+                </div>
+                <div class="time-unit">
+                    <span id="minutes">00</span>
+                    <span class="label">Минут</span>
+                </div>
+                <div class="time-unit">
+                    <span id="seconds">00</span>
+                    <span class="label">Секунд</span>
+                </div>
             </div>
             <div id="festival-started" class="festival-started" style="display: none;">Фестиваль начинается!</div>
-        </div>
+        </div>  
+        <div class="sticky-items">
+            <button onclick="window.location.href = 'playlist.html'" class="left-sticky-button">Плейлист</button>
+            <a href="https://vk.com/aktiv_iei" class="right-sticky-button-vk"><img class="vk" src="assets/VK.png" alt=""></a>
+        </div>      
     </div>
-    <footer>
-            <button onclick="window.location.href = 'playlist.html'">Плейлист</button>
-            <a href="https://vk.com/aktiv_iei"><img class="vk" src="assets/VK.png" alt=""></a>
-    </footer>
 </body>
 </html>
