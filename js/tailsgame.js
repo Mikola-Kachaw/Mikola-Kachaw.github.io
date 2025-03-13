@@ -63,6 +63,16 @@ function createElement(name, text, classes = [], listeners = []) {
 }
 
 function saveDrawing() {
+    // Сохраняем текущее состояние холста
+    const currentImage = ctx.getImageData(0, 0, board_width, board_height);
+
+    // Заполняем холст белым цветом
+    ctx.fillStyle = 'white';
+    ctx.fillRect(0, 0, board_width, board_height);
+
+    // Рисуем текущее изображение на белом фоне
+    ctx.putImageData(currentImage, 0, 0);
+
     const data = drawingBoard.toDataURL();
     const a = createElement('a');
     a.href = data;
