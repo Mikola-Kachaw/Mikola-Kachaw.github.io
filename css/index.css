@@ -4,6 +4,12 @@
     font-weight: normal;
     font-style: normal;
 }
+
+.container {
+    min-height: calc(100vh - 200px);
+    width: 100wv;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -12,13 +18,18 @@
 
 body {
     font-family: Arial, sans-serif;
+    position: relative;
     height: 100%;
     color: white;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/background.png");
+    background-size: cover;
+    background-position: center;
     min-height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 40px;
+    padding-bottom: 100px;
+    box-sizing: border-box;
 }
 
 .vk{
@@ -42,31 +53,24 @@ body {
     justify-content: center;
 }
 
-.timer span {
-    display: inline-block;
-    min-width: 80px; /* Увеличен минимальный размер */
-    text-align: center;
-}
-
-.labels {
-    display: flex;
-    gap: 17px; /* Увеличен промежуток между элементами */
-    justify-content: center;
-    margin-top: 8px; /* Увеличен отступ */
-}
-
-.labels span {
+.label {
     font-family: 'Arctika Script', sans-serif;
-    font-size: 2.8em; /* Увеличен размер шрифта */
+    font-size: 36px; /* Увеличен размер шрифта */
     color: #666;
     min-width: 80px; /* Увеличен минимальный размер */
     text-align: center;
 }
 
+.time-unit {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
 .message {
     font-family: 'Arctika Script', sans-serif;
     font-size: 3em; /* Увеличен размер шрифта */
-    color: #333;
+    color: #f0e9e9;
     margin-bottom: 20px; /* Увеличен отступ */
 }
 
@@ -78,9 +82,9 @@ body {
 }
 
 
-footer {
-    position: fixed; /* Фиксированное позиционирование */
-    bottom: 0; /* Прижимаем к нижней части экрана */
+.sticky-items {
+    position: sticky; /* Фиксированное позиционирование */
+    bottom: 0px; /* Прижимаем к нижней части экрана */
     left: 0; /* Прижимаем к левой части экрана */
     right: 0; /* Прижимаем к правой части экрана */
     padding: 10px; /* Отступы для красоты */
@@ -89,7 +93,7 @@ footer {
     align-items: flex-end; /* Выравниваем элементы по нижнему краю */
 }
 
-footer button {
+.sticky-items button {
     font-family: 'Arctika Script', sans-serif;
     padding: 10px 20px; /* Отступы внутри кнопки */
     font-size: 40px; /* Размер текста */
@@ -112,7 +116,7 @@ a:hover, a:active {
 }
 
 .logo {
-margin-top: 9%;
+    margin-top: 9%;
 }
 
 
@@ -129,7 +133,7 @@ margin-top: 9%;
     transition: background-color 0.3s ease;
 }
 
-.start:hover, .swf:hover, .save:hover, .clear:hover, footer button:hover {
+.start:hover, .swf:hover, .save:hover, .clear:hover, .sticky-items button:hover {
     background-color: #4d0000;
 }
 
@@ -322,11 +326,10 @@ option {
 
 #player {
   flex-wrap: wrap;
-  min-width: 400px; max-width: 800px;
+  max-width: 800px;
   padding: 20px; border-radius: 10px;
   background: #e6e6e6;
   margin: auto;
-  margin-bottom: 20px;
 }
 
 #playImg {
@@ -351,7 +354,7 @@ option {
 #playTimeR { width: 100%; color: black;}
 #playTimeT { text-align: right; color: black;}
 
-#playButtons { margin-top: 10px; align-items: center; }
+#playButtons { margin-top: 10px; align-items: center; flex-wrap: wrap; justify-content: space-around;}
 #playLast, #playTog, #playNext, #playVolI { cursor: pointer; }
 #playLast, #playTog, #playNext { font-size: 32px; flex-grow: 1; }
 #playVolI { font-size: 16px; margin-right: 5px; }
@@ -363,3 +366,73 @@ option {
 #playList div.current { font-weight: 700; color: #a41111; }
 #playList div:nth-child(odd) { background: #f3f3f3; }
 
+#volumeControl {
+    display: flex;
+    align-items: center;
+}
+
+
+@media (max-width: 650px) {
+    .left-sticky-button {
+        position: absolute;
+        transform: scale(0.5) translateX(-50%);
+        left: 10px;
+        top: 0px;
+    }
+
+    .right-sticky-button {
+        position: absolute;
+        top: 0px;
+        right: 10px;
+        transform: scale(0.5) translateX(50%);
+        min-width: 400px;
+    }
+
+    .right-sticky-button-vk {
+        position: absolute;
+        top: 0px;
+        right: 10px;
+        transform: scale(0.5) translateX(50%);
+    }
+
+    .start {
+        font-size: 20px;
+    }
+
+    .sticky-items {
+        padding: 25px 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    #playImg {
+        display: none;
+    }
+
+    #playControls {
+        width: 100%;
+    }
+    
+    #playList {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .logo {
+        width: 100vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .timer {
+        width: 100vw;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: none;
+    }
+
+    .time-unit {
+        width: 41vw;
+    }
+}
