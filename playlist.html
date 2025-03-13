@@ -27,8 +27,10 @@
             <b id="playLast">◀️</b>
             <b id="playTog">⏯️</b>
             <b id="playNext">▶️</b>
-            <b id="playVolI">🔊</b>
-            <input id="playVolR" type="range" min="0" max="1" step="0.1" value="1" disabled>
+            <div id="volumeControl">
+              <b id="playVolI">🔊</b>
+              <input id="playVolR" type="range" min="0" max="1" step="0.1" value="1" disabled>
+            </div>
             </div>
         </div>
   
@@ -58,10 +60,11 @@
           <div data-src="Ю.САВИЧЕВА - Если в сердце живёт любовь.mp3" data-img="playlist.png">Юлия Савичева - Если в сердце живёт любовь</div>
         </div>
       </div>
-      <footer>
-        <button onclick="window.location.href = 'index.html'">Назад</button>
-        <button onclick="window.location.href = 'https://vk.com/music/playlist/-72236729_1_de3f1d07515a6f725f'">Послушать через ВК</button>
-</footer>
+      <div class="sticky-items">
+        <button onclick="window.location.href = 'index.html'" class="left-sticky-button">Назад</button>
+        <button onclick="window.location.href = 'https://vk.com/music/playlist/-72236729_1_de3f1d07515a6f725f'" class="right-sticky-button">Послушать через ВК</button>
+      </div>
+
 </body>
 </html>
 </html>
