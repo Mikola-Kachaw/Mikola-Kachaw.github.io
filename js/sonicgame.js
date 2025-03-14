@@ -593,5 +593,12 @@ function Maze(Width, Height) {
     }
   }
 
-  let device = navigator.userAgent;
-  console.log(device);
+  function isMobileDevice() {
+    return /Mobi|Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent);
+  }
+
+  if (isMobileDevice()) {
+    document.querySelector(".description").innerHTML = "УПРАВЛЕНИЕ:<br>Передвижение - свайп в нужную сторону";
+  }
+
+  window.onresize()
