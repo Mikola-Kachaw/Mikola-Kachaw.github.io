@@ -296,14 +296,15 @@ option {
 }
 
 #Message-Container{
+    z-index: 10;
     visibility: hidden;
     color: white;
     display: block;
-    width: 587px;
+    width: 80%;
     height: 587px;
     position: fixed;
     top: 165px;
-    left: 667px;
+    left: 10%;
     background-color: rgba(0, 0, 0, 0.3);
 }
 
@@ -474,6 +475,11 @@ option {
     .pagesel {
         flex-direction: column;
         align-items: center;
+    }
+
+    #Message-Container {
+        width: 300px;
+        left: calc(50vw - 150px)
     }
 
     .timer {
