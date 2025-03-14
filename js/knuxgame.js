@@ -87,6 +87,7 @@ window.onresize = () => {
     } else {
         document.querySelector(".description").style.display = "";
         document.querySelector(".windowgame").style.height = "";
+        document.querySelector(".knuxgame").style.height = "";
     }
 }
 
