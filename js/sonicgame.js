@@ -543,14 +543,32 @@ function Maze(Width, Height) {
   };
   
   window.onresize = function() {
-    let viewWidth = $("#view").width();
-    let viewHeight = $("#view").height();
-    if (viewHeight < viewWidth) {
-      ctx.canvas.width = viewHeight - viewHeight / 100;
-      ctx.canvas.height = viewHeight - viewHeight / 100;
+    // let viewWidth = $("#view").width();
+    // let viewHeight = $("#view").height();
+    // console.log(viewHeight);
+    // console.log(viewWidth);
+    // console.log("---");
+    // if (viewHeight < viewWidth) {
+    //   ctx.canvas.width = viewHeight - viewHeight / 100;
+    //   ctx.canvas.height = viewHeight - viewHeight / 100;
+    // } else {
+    //   ctx.canvas.width = viewWidth - viewWidth / 100;
+    //   ctx.canvas.height = viewWidth - viewWidth / 100;
+    // }
+    if (window.innerWidth < 620) {
+      let elem = document.querySelector("#mazeCanvas");
+      elem.width = "285"; // Устанавливаем новую ширину
+      elem.height = "285";
+      elem = document.querySelector("#page");
+      elem.style.width = "300px";
+      elem.style.height = "300px"
     } else {
-      ctx.canvas.width = viewWidth - viewWidth / 100;
-      ctx.canvas.height = viewWidth - viewWidth / 100;
+      let elem = document.querySelector("#mazeCanvas");
+      elem.width = "585"; // Устанавливаем новую ширину
+      elem.height = "585";
+      elem = document.querySelector("#page");
+      elem.style.width = "600px";
+      elem.style.height = "600px"
     }
     cellSize = mazeCanvas.width / difficulty;
     if (player != null) {
@@ -574,3 +592,6 @@ function Maze(Width, Height) {
       document.getElementById("mazeContainer").style.opacity = "100";
     }
   }
+
+  let device = navigator.userAgent;
+  console.log(device);
