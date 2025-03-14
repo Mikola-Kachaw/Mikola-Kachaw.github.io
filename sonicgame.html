@@ -15,14 +15,20 @@
 <body>
     <div class="container pageswf sonicpage">
         <h1 style="font-weight: bolder;padding-bottom: 20px;">Лабиринт Билетов</h1>
-        <div class="windowmaze"id="page">
-        <div id="Message-Container">
-                <div class="pagesel1 victory">
-                    <h2>ВЫ ПОБЕДИЛИ!!!<h2>
-                    <p id="moves"></p>
-                    <button class="save" id="okBtn" onclick="toggleVisablity('Message-Container')">ЗДОРОВО!</button>
-                </div>
+        <div class="pageswf victory" id="Message-Container" style="visibility: hidden;">
+            <h2>Вы Победили<h2>
+            <button style="font-family: 'Arctika Script', sans-serif;
+padding: 10px 20px;
+font-size: 40px;
+background-color: #a41111;
+color: white; /* Цвет текста */
+border: none; /* Убираем границу */
+border-radius: 5px; /* Закругляем углы */
+cursor: pointer; /* Курсор в виде указателя */
+transition: background-color 0.3s ease;" onclick="window.location.href = 'sonicgame.html'">ЗАНОВО</button>
             </div>
+        <div class="windowmaze"id="page">
+        
             <div id="view">
                 <div id="mazeContainer">
                     <canvas id="mazeCanvas" height="585" width="585"></canvas>
