@@ -32,16 +32,12 @@ function changeBrightness(factor, sprite) {
 }
 
 function displayVictoryMess(moves) {
-    document.getElementById("moves").innerHTML = "Сделано " + moves + " шагов.";
-    toggleVisablity("Message-Container");
+  toggleVisablity("Message-Container");
 }
 
 function toggleVisablity(id) {
-    if (document.getElementById(id).style.visibility == "visible") {
-        document.getElementById(id).style.visibility = "hidden";
-    } else {
-        document.getElementById(id).style.visibility = "visible";
-    }
+  console.log("asdasdas");
+    document.getElementById(id).style.visibility = "visible";
 }
 
 function Maze(Width, Height) {
