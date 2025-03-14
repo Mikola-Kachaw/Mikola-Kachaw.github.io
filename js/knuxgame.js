@@ -78,3 +78,24 @@ function DrEggman(){
 eggpawn.addEventListener(`click`, ()=>{
     EGGPAWN()
 })
+
+window.onresize = () => {
+    if (window.innerHeight < 550) {
+        document.querySelector(".description").style.display = "none";
+        document.querySelector(".windowgame").style.height = "calc(100vh - 100px)";
+        document.querySelector(".knuxgame").style.height = "calc(100vh - 110px)";
+    } else {
+        document.querySelector(".description").style.display = "";
+        document.querySelector(".windowgame").style.height = "";
+    }
+}
+
+function isMobileDevice() {
+    return /Mobi|Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent);
+  }
+
+  if (isMobileDevice()) {
+    document.querySelector(".description").innerHTML = "УПРАВЛЕНИЕ:<br>Тыкай на шарики";
+  }
+
+  window.onresize()
