@@ -8,7 +8,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
-    <script src="js/sonicgame.js" defer></script>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js" defer></script>
 </head>
@@ -20,7 +20,7 @@
                 <div class="pagesel1 victory">
                     <h2>ВЫ ПОБЕДИЛИ!!!<h2>
                     <p id="moves"></p>
-                    <button class="save" id="okBtn" onclick="toggleVisabitily('Message-Container')">ЗДОРОВО!</button>
+                    <button class="save" id="okBtn" onclick="toggleVisablity('Message-Container')">ЗДОРОВО!</button>
                 </div>
             </div>
             <div id="view">
@@ -45,15 +45,6 @@
     <div class="sticky-items">
         <button onclick="window.location.href = 'gameselect.html'">Назад</button>
     </div>
-    <script>
-        if (window.innerWidth < 620) {
-            let elem = document.querySelector("#mazeCanvas");
-            elem.width = "300px"; // Устанавливаем новую ширину
-            elem.height = "300px";
-            elem = document.querySelector("#page");
-            elem.style.width = "300px";
-            elem.style.height = "300px"
-        }
-    </script>
+    <script src="js/sonicgame.js" defer></script>
 </body>
 </html>
