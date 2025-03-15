@@ -27,10 +27,8 @@ function changebrushSize(evt){
 function applyResponsiveStyles() {
     const windowGame = document.querySelector('.windowgame');
     const drawingBoard = document.getElementById('board');
-    console.log("resize");
 
     if (window.matchMedia("(max-width: 800px), (max-height: 600px)").matches) {
-        console.log("ASDASDAS")
         // Условия для второго медиа-запроса
         windowGame.style.width = '300px';
         windowGame.style.height = '200px';
@@ -39,7 +37,6 @@ function applyResponsiveStyles() {
         drawingBoard.width = "287";
         drawingBoard.height = "187";
     } else if (window.matchMedia("(max-width: 1100px), (max-height: 850px)").matches) {
-        console.log("asdasd");
         // Условия для первого медиа-запроса
         windowGame.style.width = '600px';
         windowGame.style.height = '400px';
@@ -113,3 +110,21 @@ clear.addEventListener(`click`, clearBoard)
 colorPick.addEventListener('change', changeColor)
 brushPick.addEventListener(`change`, changebrushSize);
 save.addEventListener(`click`, saveDrawing)
+
+function isMobileDevice() {
+    return /Mobi|Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent);
+}
+
+if (isMobileDevice()) {
+    let elems = document.body.childNodes;
+    console.log(navigator.userAgent)
+    elems.forEach(x => {
+        if (x.nodeType === Node.ELEMENT_NODE) {
+            if (x.classList.contains("comp-warn")) {
+                x.style.display = "flex";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    });
+}
