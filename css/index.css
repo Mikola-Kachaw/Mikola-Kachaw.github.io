@@ -510,3 +510,15 @@ option {
         display: none;
     }
 }
+
+.comp-warn {
+    display: none;
+    height: calc(100vh - 40px);
+    align-items: center;
+    justify-content: center;
+}
+
+.comp-warn img {
+    max-width: 70vw;
+    max-height: 70vh;
+}
